@@ -1,0 +1,28 @@
+<template name="pic_posting">
+
+    <div id="pic_posting">
+        <section class="jumbotron" style="background-color: white;">
+            <div class="container">
+                <h1 class="text-center">일기장 작성</h1>
+                <p>
+                <div class="lead text-muted text-center">사진과 일기를 저장합니다.</div>
+                </p>
+                {{#with post}}
+                    <div class="row text-center">
+                        <div class="input-group mb-3 col-md-3">
+                            <input class="form-control" value="{{name}}" type="text" id="inp-name" placeholder="작성자"/>
+                        </div>
+                        <div class="input-group mb-3 col-md-9">
+                            <input class="form-control" value="{{title}}" type="text" id="inp-title" placeholder="제목"/>
+                        </div>
+                    </div>
+                    <div id="editor">{{{content}}}</div>
+                {{/with}}
+                <p>
+                    <a id="btn-save" href="#" class="btn btn-primary">일기 저장</a>
+                    <a id="btn-quit" href="../pic_post" class="btn btn-secondary">일기 쓰기 취소</a>
+                </p>
+            </div>
+        </section>
+    </div>
+</template>
